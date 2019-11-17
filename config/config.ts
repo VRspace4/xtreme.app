@@ -92,6 +92,18 @@ export default {
       ],
     },
     {
+      path: 'app',
+      component: '../layouts/XtremeLayout',
+      routes: [
+        {
+          path: '/app',
+          name: 'app',
+          icon: 'smile',
+          component: './App',
+        },
+      ]
+    },
+    {
       path: '/',
       component: '../layouts/SecurityLayout',
       routes: [

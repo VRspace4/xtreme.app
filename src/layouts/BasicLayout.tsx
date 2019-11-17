@@ -116,7 +116,8 @@ const footerRender: BasicLayoutProps['footerRender'] = () => {
 };
 
 const BasicLayout: React.FC<BasicLayoutProps> = props => {
-  const { dispatch, children, settings, location = { pathname: '/' } } = props;
+  const { dispatch, children, collapsed, settings, location = { pathname: '/' } } = props;
+  console.log('start', collapsed)
   /**
    * constructor
    */
@@ -135,6 +136,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
    * init variables
    */
   const handleMenuCollapse = (payload: boolean): void => {
+    console.log('collapsed', collapsed);
     if (dispatch) {
       dispatch({
         type: 'global/changeLayoutCollapsed',
